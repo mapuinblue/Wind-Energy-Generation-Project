@@ -28,19 +28,6 @@ The purpose of this project is to identify optimal locations for wind energy pro
 - **Percentiles**: 60th percentile to identify conditions exceeding moderate wind speeds.  
 - **Interquartile Range (IQR)**: Highlights the spread of central wind speeds (Q3 - Q1).  
 
-#### **Formulas**
-1. **GEV Distribution (Riohacha)**:  
-   - Probability Density Function:  
-     \( f(v) = \frac{1}{\sigma} \left( 1 + \xi \frac{v - \mu}{\sigma} \right)^{-\frac{1}{\xi} - 1} e^{-\left( 1 + \xi \frac{v - \mu}{\sigma} \right)^{-\frac{1}{\xi}}} \)  
-     where \( \xi \), \( \mu \), and \( \sigma \) are the shape, location, and scale parameters.  
-
-2. **Log-Normal Distribution (Santa Marta & Cartagena)**:  
-   - Probability Density Function:  
-     \( f(v) = \frac{1}{v \sigma \sqrt{2 \pi}} e^{-\frac{(\ln v - \mu)^2}{2 \sigma^2}} \)  
-
-3. **Kernel Density Estimation (KDE)**:  
-   - A non-parametric approach that estimates the probability density function based on the actual distribution of data points.  
-
 #### **Models Used**
 - **Generalized Extreme Value (GEV)**: Captures extreme wind events for cities like Riohacha, critical for maximum energy generation.  
 - **Kernel Density Estimation (KDE)**: Provides a flexible, data-driven representation of wind speed distributions for all cities.  
